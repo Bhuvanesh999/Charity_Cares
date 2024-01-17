@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Charity Cares</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: linear-gradient(to bottom, #FF7507, #5300A4);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background: linear-gradient(to bottom, #FF7507, #5300A4);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <img src="C:\Users\Dell\Downloads\CharityCares.png" alt="Charity Cares">        <h1>Charity Cares</h1>
+        <nav>
+         <style>
+img {
+            width: 60px;
+            height: auto;
+        }
+        a {
+            color: #FF0000;
+            text-decoration: none;
+        }
+        a:visited {
+            color: #FF0000;
+        }
+        a:hover {
+            color: #00FF00;
+        }
+    </style>
+<body>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="container">
+            <h1>Registration Form</h1>
+
+        <div class="input">
+            <form method="POST" name="google-sheet">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="First Name" class="fname" id="firstName"name="firstName">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <input type="text" placeholder="last Name" class="lname"  id="lastName"name="lastName">
+            </div>
+            <div class="input">
+                <b>gender:</b>
+                <input type="radio" name="gender" value="male" id="male">Male
+                <input type="radio" name="gender" value="female" id="female">Female
+            </div>
+            <div class="input">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <input type="text" placeholder="location"  class="inpt" id="locaton" name="location">
+            </div>
+                    <button>
+            Register
+        </button>
+    </form>
+        </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbz62bjembPXyi2o4LKv8HQeTkJQqkq8Mpb-HHUp4rImj6Yv4Csawu18_-Kn9b-p1YtGPA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+
+
+</body>
+</html>
